@@ -1,0 +1,24 @@
+{
+  "Book": [
+
+    {
+      "Authors": ["Brian Jensen"],
+      "Title": "Texts from Denmark",
+      "Publisher": "Gyldendal",
+      "PublicationYear": 2001,
+      "NumberOfPages": 253
+    },
+
+    {
+      "Authors": [ "Peter Jensen", "Hans Andersen" ],
+      "Title": "Stories from Abroad",
+      "Publisher": "Borgen",
+      "PublicationYear": 2012,
+      "NumberOfPages": 156
+    }
+
+  ]
+
+}     
+   
+
