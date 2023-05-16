@@ -47,6 +47,35 @@ public class BookServiceTest
         Assert.Equal(expectedLocation, location);
     }
 
+    [Fact]
+    public void FindBook_WithOneSearchString_Test()
+    {
+        //Arrange
+
+        var searchstring = "Gyldendal";
+        //Act
+        var books = _bookService.FindBooks(searchstring);
+
+        //Assert
+        Assert.Equal(1, books.Count);
+        Assert.Equal(searchstring, books[0].Publisher);
+    }
+
+
+    [Fact]
+    public void FindBook_WithMultipleSearchStrings_Test()
+    {
+        //Arrange
+
+        var searchstring = "Gyldendal & 2012";
+        //Act
+        var books = _bookService.FindBooks(searchstring);
+
+        //Assert
+        Assert.Equal(2, books.Count);
+        Assert.Equal("Gyldendal", books[0].Publisher);
+        Assert.Equal(2012, books[1].PublicationYear);
+    }
     private void GenerateTestData()
     {
 
